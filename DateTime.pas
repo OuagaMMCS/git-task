@@ -5,6 +5,10 @@
   if ((Year mod 4 = 0) and (Year mod 100 <> 0)) or (Year mod 400 = 0) then
     IsV := True;
   Println($'Год високосный: {IsV}');
+  if IsV then
+    Println('В году 366 дней')
+  else
+    Println('В году 365 дней');
   var (day1, mon1) := ReadInteger2('Введите первый день и месяц:');
   var (day2, mon2) := ReadInteger2('Введите второй день и месяц:');
   Assert((day1 in 1..31) and (day2 in 1..31));
