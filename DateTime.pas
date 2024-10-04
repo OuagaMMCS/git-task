@@ -1,4 +1,7 @@
 ﻿begin
+  var hour := ReadInteger('Введите количество часов');
+  Assert(hour > 0);
+  Println($'В {hour} часов {hour*3600} секунд.');
   var (y1, y2) := ReadInteger2('Введите два года:');
   Assert((y1 > 0) and (y2 > 0));
   var counter := 0;
