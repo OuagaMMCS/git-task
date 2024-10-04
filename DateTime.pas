@@ -1,4 +1,15 @@
 ﻿begin
+  var (y1, y2) := ReadInteger2('Введите два года:');
+  Assert((y1 > 0) and (y2 > 0));
+  var counter := 0;
+  for var i := y1 to y2 do
+  begin
+    if ((y1 mod 4 = 0) and (y1 mod 100 <> 0)) or (y1 mod 400 = 0) then
+      counter += 366
+    else
+      counter += 355;
+  end;
+  Println($'Между {y1} и {y2} {counter} дней.');
   var Year := ReadInteger('Введите год:');
   Assert(Year > 0);
   var IsV := False;
